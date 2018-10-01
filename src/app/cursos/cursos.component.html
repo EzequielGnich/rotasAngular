@@ -1,0 +1,16 @@
+<p>
+  Lista de Cursos
+</p>
+
+<app-curso-detalhe></app-curso-detalhe>
+
+<button class="btn" (click)="avacarPagina()">Proxima</button>
+<button class="btn" (click)="retornarPagina()">Anterior</button>
+
+<div class="collection">
+  <a class="collection-item" *ngFor="let curso of cursos" [routerLink]="['/curso', curso.id]">
+    {{ curso.nome }}
+  </a>
+</div>
+
+<p>{{ pagina }}</p>
